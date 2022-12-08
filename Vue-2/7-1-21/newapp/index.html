@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <div id="app">
+    <v-app>
+      <v-main>
+        <v-toolbar>
+                <v-toolbar-title>Newspaper</v-toolbar-title>
+                <v-spacer></v-spacer>
+                <v-toolbar-items>
+                    <v-btn text>News</v-btn>
+                    <v-btn text>About Us</v-btn>
+                    <v-divider insert vertical></v-divider>
+                    <v-btn text>Sign Up</v-btn>
+                </v-toolbar-items>
+        </v-toolbar>
+        <v-container grid-list-lg>
+            <v-layout row>
+                <v-flex xs2>
+                    <v-card>
+                        <v-card-text>
+                            This is some text. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    
+                    </v-card>
+
+                </v-flex>
+                <v-flex xs7>
+                    <v-card>
+                        <v-card-title class="display-1">Article Title</v-card-title>
+                        <v-card-text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</v-card-text>
+                    
+                    
+                    </v-card>
+                
+                </v-flex>
+                <v-flex xs3>
+                    <v-layout column>
+                        <v-flex>
+                            <v-card elevation="10">
+                                <v-card-text>
+                                    this here
+                                </v-card-text>
+                            </v-card>
+                        </v-flex>
+                    </v-layout>
+                </v-flex>
+
+            
+
+            </v-layout>
+        
+        </v-container>
+      </v-main>
+    </v-app>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script src="app.js"></script>
+  </body>
+  </html>

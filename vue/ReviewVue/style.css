@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+.purple {
+    color: purple;
+}
+.bold {
+    font-weight: bold;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.board {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+
+}
+
+.piece {
+    position:absolute;
+    width: 15px;
+    height: 15px;
+    background-color: purple;
+}
+
+.goal{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+}
+#win {
+    text-align: center;
+}

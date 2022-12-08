@@ -1,0 +1,57 @@
+library: code given to you. 
+
+framework: whole way, style, library. 
+
+think about real apps you want to build.
+
+
+DOM:
+    Document Object Model. 
+    From the code it can reach into the page and mess with it. 
+    Allows your code to manipulate the document. 
+    dynamic: changing. 
+
+    the DOM is the elements tab. 
+
+    modal is the higher archy. elements are the objects. 
+
+     -query
+     -modify 
+     -insert 
+
+
+Higherarchy in the code. 
+
+
+
+developer.mozilla.org --> BEST javascript resource. 
+
+HOMEWORK::
+* Math random. 
+
+Math.random() * 100;
+
+Math.floor(Math.random() * 100);
+
+Math.floor(Math.random()* 100) +1;
+
+Math.ceil 
+
+
+Variable scoping. 
+
+
+
+github.com/djholt/code-school-2021
+
+
+HOMEWORK:: THink about what you want to do. What is the ingrediants that need to go into tic tac toe. 
+
+
+turns 
+2 players
+x and o's 
+winner
+onclick
+
+loop -> with click handlers. 

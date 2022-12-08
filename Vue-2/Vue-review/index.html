@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div class="wrapper">
+            <nav v-bind:class="active">
+                <div class="logo"><h1>Sunshine Blog<h1></div>
+                <a  href="#" class="navigation" v-on:click="makeActive('home')">Home</a>
+                <a href="#" class ="navigation" v-on:click = "makeActive('blog')">Blog</a>
+                <a href="#" class="navigation" v-on:click= "makeActive('thread')">Threads</a>
+                <a href = "#" class="navigation" v-on:click= "makeActive('create')">Create</a>
+                <a href = "#" class="navigation" v-on:click="makeActive('contact')">Contact</a>
+            </nav>
+
+            <div v-if = "page==='home'">
+                <h2>Home</h2>
+
+            </div>
+
+            <div v-else-if = "page==='blog'">
+                <h2>The Sunshine Blog</h2>
+            </div>
+            <div v-else-if = "page==='thread'">
+                <h2> The Sunshine Thread </h2>
+
+
+
+            </div>
+            <div v-else-if = "page==='create'">
+                <h2>Create a Post or Thread</h2>
+                <select v-model="selected">
+                    <option disable value = "">Please Select One</option>
+                    <option>Pink</option>
+                    <option>Blue</option>
+                    <option>Orange</option>
+
+                </select>
+                <span> selected: {{ selected }}</span>
+                <select v-model="selected_2">
+                <option v-for="option in options" v:bind:value = "opiton.value">
+                    {{option.text}}
+                </option>
+                </select>
+                <span> Selected: {{ selected_2 }} </span>
+
+            </div>
+            <div v-else-if = "page==='contact'">
+                <h2>Contact The Sunshine Blog <h2>
+
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+    
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="app.js"></script>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+        
+    </head>
+    <div id="app">
+        <v-app>
+            <v-main>
+                <v-container>
+                    <v-flex xs6 lg3></v-flex>
+                    <v-flex xs6 lg9>
+                        <div class="purple--text text-lighten-3 text-uppercase display-2 ma-4">Todos</div>
+                        <v-text-field
+                            label="What needs to be done?"
+                            outline
+                            color="purple darken-3"
+                            clearable
+                            autofocus
+                            v-model="new_todo_name">
+                        </v-text-field>
+                        <v-text-field 
+                        label="Description"
+                        outline
+                        color="purple darken-3"
+                        clearable
+                        autofocus
+                        v-model="new_todo_description">
+                        </v-text-field>
+                        <v-spacer></v-spacer>
+                        <v-btn @click="addNewTodo()" class="mb-5">Add</v-btn>
+                        
+                        
+                        <v-card>
+                            <v-list>
+                                <v-list-item v-for="(todo,index) in todos">
+                                    <v-list-item-action>
+                                        <v-checkbox v-model="todo.done" color="purple lighten-3"></v-checkbox>
+                                    </v-list-item-action>
+                                    <v-list-item-content>
+                                        <v-list-item-title v-if="!todo.editing" @dblclick="todo.editing= true">
+                                            {{ todo.name }}
+                                            <br>
+                                            {{ todo.description}}
+                                        </v-list-item-title>
+                                        <v-text-field v-else autofocus color="purple lighten-2" v-model="todo.name"
+                                            @keyup.enter="todo.editing = false">
+                                        </v-text-field>
+                                        <v-list-item-action>
+                                            <v-btn>
+                                                <v-icon @click="deleteTodo(index)" color="grey" >mdi-delete<v-icon>
+                                            </v-btn>
+                                    </v-list-item-content>
+                                </v-list-item>
+                            </v-list>
+                        </v-card>
+                        <v-footer class="ma-4 pa-4">
+                            <v-layout column>
+                                <div class="purple--text text--lighten-3">Double click to edit Todo</div>
+                                <div class="purple--text text--lighten-3">Using Vuetify</div>
+                                <div class="purple--text text--lighten-3">@Codeschool 2021</div>
+                            </v-layout>
+                        </v-footer>
+                    </v-flex>
+                </v-container>
+            </v-main>
+        </v-app>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <!--<h1 style="font-size:50px">Todo App</h1>
+        <div class="input_area">
+            <h2 style="	font-size:35px">Create Todo<h2>
+            <label>Name</label>
+            <input type="text" v-model="new_todo_name" placeholder="Enter a new todo name"><br>
+            <label>Description</label>
+            <input type="text" v-model="new_todo_description" placeholder="Description"><br>
+            <label>Deadline</label>
+            <input style="margin-top:10px" type="date" v-model="new_todo_deadline" placeholder="Deadline Date"><br>
+            <button v-on:click="addNewTodo( )">Add</button>
+        </div>
+        <h2 style="font-size:35px;margin-bottom:0">Your Todo List</h2>
+        <ul id="todos">
+            <li class="todo" v-for="(todo,index) in todos">
+                <input class="checkbox" type="checkbox" v-model ="todo.done">
+
+                <div v-if="todo.editing">
+                    <input type= "text" v-model= "todo.name">
+                    <input type= "text" v-model= "todo.description">
+                    <input type= "text" v-model= "todo.deadline">
+                    <button v-on:click="saveTodo(todo)">Save</button>
+                </div>
+
+                <div v-else v-bind:class="{ done: todo.done }">
+                    <p> {{ todo.name }} </p><br>
+                    <p> {{ todo.description }} </p><br>
+                    <p> {{ todo.deadline }} </p><br>
+                    <button v-on:click="editTodo(todo)">Edit</button>
+                </div>
+            
+                <button v-on:click="deleteTodo(index)">Delete</button>
+            </li>
+        </ul>-->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="app.js"></script>
+</html>

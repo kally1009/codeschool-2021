@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    margin: 0, auto;
+}
+.wrapper {
+    width: 1092px;
+    margin-top:0;
+    margin-bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.cover {
+    background-image: url("photos/cleaning-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    background-position: right;
+    display: flex; 
+    justify-content: space-between;
+}
+
+.paragraph {
+    text-align: center;
+    padding: 20px; 
+
+}
+
+.main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px; 
+}
+
+h2 {
+    text-align: center; 
+}
+
+h1 {
+    padding-left: 40px;
+    font-family: 'Parisienne', cursive;
+    
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style-type: none;
+    padding-top: 0px;
+     
+
+}
+
+li {
+    padding: 25px; 
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold; 
+}
+
+a:hover {
+    color: red; 
+}
+
+#bottom-footer {
+    background-color: gray; 
+}
+footer {
+    margin: 0 auto; 
+}

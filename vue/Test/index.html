@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dixie State University Quiz</title>
+</head>
+<body>
+    <div id="app" class="wrapper">
+        <h1>Dixie State University Facts Quiz</h1>
+        <br>
+        <nav>
+            <p v-on:click="page = 'test'">Test</p>
+            <p v-on:click="page = 'results'">Results</p>
+        </nav>
+        <div v-if = "page == 'test'">
+            <h2>Quiz</h2>
+            <p>Questions: </p>
+            <p v-for="(question,index) in questions">
+                {{ question.question }}
+                <br><input value="option1" type="radio" v-model="questions.choice" v-bind:"check(option1)">
+                {{ question.option1 }}
+                <br><input value="option2" type="radio" v-model="questions.choice" v-bind:"check(option2)">
+                {{ question.option2 }}
+                <br><input value="option3" type="radio" v-model="questions.choice" v-bind:"check(option3)">
+                {{ question.option3 }}
+            </p>
+            <button v-on:click = "answer (index)">Submit</button>
+
+
+
+
+
+        </div>
+        <div v-if = "page=='results'">
+            <h2>Results</h2>
+
+            <p> You ranked as {{ rank }} </p>
+        </div>
+
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="app.js"></script>
+</html>

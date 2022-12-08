@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    text-align: center;
+    background-image: url("abstract-1850424_1920.jpg");
+    background-position: cover;
+    background-repeat: no-repeat;
+}
+.wrapper {
+    width: 992px;
+    margin: 15px auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+}
+
+.flex-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#about{
+    width: 500px;
+}
